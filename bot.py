@@ -28,7 +28,7 @@ async def on_ready():
 @app_commands.describe(
     name="@ someone"
 )
-async def cat(interaction: discord.Interaction, name: string):
+async def cat(interaction: discord.Interaction, name: str):
     await interaction.response.send_message(
         f"""
         好无聊逗逗{name}吧
