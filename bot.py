@@ -25,10 +25,13 @@ async def on_ready():
 
 # cat snowball
 @client.tree.command(name='cat', description="cat SnowBall")
-async def cat(interaction: discord.Interaction):
+@app_commands.describe(
+    name="@ someone"
+)
+async def cat(interaction: discord.Interaction, name: string):
     await interaction.response.send_message(
-        """
-        好无聊逗逗雪球吧
+        f"""
+        好无聊逗逗{name}吧
         嘬嘬嘬𐃆 ˒˒ ͏                               
 ͏
 ͏
